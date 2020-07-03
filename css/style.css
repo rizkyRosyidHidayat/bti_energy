@@ -1,0 +1,81 @@
+.bg-orange{
+  background-color: orange;
+}
+.bg-light-orange{
+  background-color: #ffecca;
+}
+.btn-outline-orange{
+  border: 2px solid orange;
+  color: orange;
+  transition: all 0.2s ease-in-out;
+}
+.btn-outline-orange:hover{
+  background-color: orange;
+  color: #fff;
+}
+.text-orange{
+  color: orange;
+}
+.border-orange{
+  border: 5px solid orange;
+  border-radius: 20px;
+  overflow: hidden;
+}
+.btn-icon{
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 100%;
+}
+#header{
+  top: -75px;
+  transition: top 0.3s ease-in-out;
+}
+.banner{
+  background-image: url('../img/banner.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.title::before{
+  content: '';
+  width: 100px;
+  height: 2px;
+  background-color: orange;
+  display: inline-block;
+  position: relative;
+  bottom: 10px;
+}
+.title::after{
+  content: '';
+  width: 100px;
+  height: 2px;
+  background-color: orange;
+  display: inline-block;
+  position: relative;
+  bottom: 10px;
+}
+.img-team{
+  width: 150px;
+  height: 150px;
+  overflow: hidden;
+}
+.konsultasi{
+  background-color: orange;
+  background-image: url(../img/consultan1.png);
+  background-size: 50%;
+  background-position: right;
+  background-repeat: no-repeat;
+}
+::placeholder .form-control{
+  color: #fff !important;
+}
+#footer{
+  background-image: url(../img/banner.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.footer-container{
+  background-color: rgba(255, 255, 255, 0.7);
+}
