@@ -1,10 +1,10 @@
 Vue.component('konsultasi-section', {
   template: `
-  <section class="konsultasi py-5">
-    <div class="container">
+  <section id="konsultasi" class="konsultasi pb-0 pt-5 pb-md-5">
+    <div class="container-lg">
       <div class="row align-items-center">
-        <div class="col-6 text-white">
-          <div class="w-75">
+        <div class="col-12 col-md-6 text-white mb-5">
+          <div class="w-100 w-md-75">
             <blockquote class="blockquote">
               <footer class="blockquote-footer text-white">KAMI SIAP MEMBANTU</footer>
             </blockquote>
@@ -31,7 +31,7 @@ Vue.component('konsultasi-section', {
             </form>
           </div>
         </div>
-        <div class="col-6">
+        <div class="col-12 col-md-6 py-5 bg-image-konsultasi">
           <div class="text-center text-white text-uppercase">
             <p>silahkan hubungi kami kapanpun untuk berdiskusi</p>
             <p class="font-weight-bold">konsultasi gratis</p>

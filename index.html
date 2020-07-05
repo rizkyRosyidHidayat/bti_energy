@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css">
+	<link rel="stylesheet" href="css/swiper.min.css">
   <link rel="stylesheet" href="css/bootstrap.min.css">
   <link rel="stylesheet" href="css/style.css">
   <title>BTI Energy</title>
@@ -12,14 +12,14 @@
 
 <body>
   <div id="app">   
-    <fixed-header></fixed-header>
+    <fixed-header :header="header" @selectedMenu="selectedMenu" :other="other" @visibledhiddenmenu="visibledhiddenmenu"></fixed-header>
     <top-header></top-header> 
-    <header-section></header-section>
+    <header-section :header="header" @selectedMenu="selectedMenu" :other="other" @visibledhiddenmenu="visibledhiddenmenu"></header-section>
     <banner-section></banner-section>
     <section class="py-4 bg-orange text-white">
-      <div class="container d-flex justify-content-between align-items-center ">
-        <div class="h4">Ayo manfaatkan tenaga surya dan hemat energi hingga 70%</div>
-        <div class="btn btn-lg btn-success border-white">
+      <div class="container-lg d-flex justify-content-md-between justify-content-sm-center align-items-center">
+        <div class="h4 text-sm-center">Ayo manfaatkan tenaga surya dan hemat energi hingga 70%</div>
+        <div class="btn btn-lg btn-success border-white d-none d-md-block">
           HUBUNGI KAMI
         </div>
       </div>
@@ -33,8 +33,12 @@
     <partner-section></partner-section>
     <konsultasi-section></konsultasi-section>
     <footer-section></footer-section>
+    <div v-if="visibleHiddenMenu">
+      <div class="screen-hidden-menu fixed-top" @click="visibleHiddenMenu = false"></div>
+      <hidden-menu :menu="hiddenMenu" :visible="visibleHiddenMenu"></hidden-menu>
+    </div>
   </div>
-	<script src="https://unpkg.com/swiper/js/swiper.min.js"></script>
+	<script src="js/swiper.min.js"></script>
   <script src="js/vue.js"></script>
   <script type="module" src="js/main.js"></script>
 </body>

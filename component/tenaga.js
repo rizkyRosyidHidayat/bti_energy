@@ -1,7 +1,7 @@
 Vue.component('tenaga-section', {
   template: `
-  <section class="bg-light-orange pb-5">
-    <div class="container">
+  <section id="tenaga" class="bg-light-orange pb-5">
+    <div class="container-lg">
       <div class="py-5">
         <h1 class="font-weight-bold text-orange title text-center">
           Tenaga Surya
@@ -12,7 +12,7 @@ Vue.component('tenaga-section', {
         </p>
       </div>
       <div class="row align-items-end">
-        <div v-for="item in cols" class="col-4">
+        <div v-for="item in cols" class="col-12 col-md-4 col-sm-12 mb-3">
           <center>
             <div class="w-75 text-center">
               <img :src="'img/'+item.img" alt="" class="w-75">

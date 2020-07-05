@@ -1,7 +1,7 @@
 Vue.component('team-section', {
   template: `
-    <section class="bg-light-orange pb-5">
-      <div class="container">
+    <section id="team" class="bg-light-orange pb-5">
+      <div class="container-lg">
         <h1 class="font-weight-bold text-orange title py-5 text-center">
           Our Team
         </h1>
@@ -10,7 +10,7 @@ Vue.component('team-section', {
           anda <br> memanfaatkan Energi Terbarukan
         </p>
         <div class="d-flex align-items-center">
-          <button class="btn btn-icon bg-orange nav-left-team mr-3">
+          <button class="btn btn-icon bg-orange nav-left-team mr-3 d-none d-md-block">
             <img src="icon/chevron_left.svg" alt="chevron_left">
           </button>
 
@@ -42,7 +42,7 @@ Vue.component('team-section', {
             </div>
           </div>
 
-          <button class="btn btn-icon bg-orange nav-right-team ml-3">
+          <button class="btn btn-icon bg-orange nav-right-team ml-3 d-none d-md-block">
             <img src="icon/chevron_right.svg" alt="chevron_right">
           </button>
         </div>

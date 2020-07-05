@@ -11,9 +11,38 @@ import '../component/team.js'
 import '../component/partner.js'
 import '../component/konsultasi.js'
 import '../component/footer.js'
+import '../component/hidden_menu.js'
 
 const app = new Vue({
-    el: '#app'
+    el: '#app',
+    data: {
+        header: [
+			{ link: '#home', text: 'OVERVIEW', active: true },
+			{ link: '#why', text: 'WHY ?', active: false },
+			{ link: '#tenaga', text: 'TENAGA SURYA', active: false },
+			{ link: '#mikro_hidro', text: 'MIKRO HIDRO', active: false }
+        ],
+        other: [
+            { text: 'PROJEK', link: '#projek' },
+            { text: 'CONSULTATION', link: '#konsultasi' },
+            { text: 'OUR TEAM', link: '#team' },
+            { text: 'OUR PARTNERSHIP', link: '#partner' }
+        ],
+        visibleHiddenMenu: false
+    },
+    computed: {
+        hiddenMenu() {
+            return this.header.concat(this.other)
+        }
+    },
+    methods: {
+        selectedMenu(val) {
+            this.header = val
+        },
+        visibledhiddenmenu(val) {
+            this.visibleHiddenMenu = val
+        }
+    }
 })
 
 var header = document.querySelector('#header')
@@ -21,13 +50,11 @@ var header = document.querySelector('#header')
 window.onscroll = function () { scrollFunction() };
 
 function scrollFunction() {
-    if (window.innerWidth > 1100) {
-        if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
-            header.style.cssText = "top: 0px"
-        } else {
-            header.style.cssText = "top: -75px"
-        }
-    }
+    if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+        header.style.cssText = "top: 0px"
+    } else {
+        header.style.cssText = "top: -90px"
+    }    
 }
 
 var swiper_tenaga = new Swiper('.swiper-container-tenaga', {
@@ -57,5 +84,19 @@ var swiper_team = new Swiper('.swiper-container-team', {
         prevEl: '.nav-left-team',
     },
     slidesPerView: 3,
-    spaceBetween: 32
+    spaceBetween: 32,
+    breakpoints: {
+        500: {
+            slidesPerView: 1,
+            spaceBetween: 20,
+        },
+        768: {
+            slidesPerView: 2,
+            spaceBetween: 40,
+        },
+        1024: {
+            slidesPerView: 3,
+            spaceBetween: 50,
+        },
+    }
 })

@@ -1,6 +1,6 @@
 Vue.component('top-header', {
   template: `
-    <div class="top-header">
+    <div class="top-header d-none d-lg-block">
       <div class="navbar navbar-light navbar-expand-md">
         <div class="container align-items-center">
           <div class="navbar-nav">

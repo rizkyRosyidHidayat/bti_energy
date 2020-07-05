@@ -1,3 +1,5 @@
+import '../component/dropdown_menu.js'
+
 Vue.component('calculator-card', {
   template: `
   <div class="card">
@@ -7,25 +9,19 @@ Vue.component('calculator-card', {
     <div class="card-body">
       <form action="">
         <label for="">Kapasitas Listrik Terpasang</label>
-        <div class="input-group mb-3">
-          <input type="text" class="form-control bg-light border-0" value="Masukan daya listrik terpasang" readonly>
-          <div class="input-group-append">
-            <span class="input-group-text bg-light border-0">
-              <img src="icon/chevron-down.svg" alt="chevron-down">
-            </span>
-          </div>
-        </div>
+        <dropdown-menu 
+          :menu="dayaListrik"
+          placeholder="Masukan daya listrik terpasang"
+          v-model="calc.daya"
+        ></dropdown-menu>
         <label for="">Tagihan Listrik Bulanan</label>
         <input type="number" class="form-control bg-light border-0 mb-3" placeholder="Rp. 500.000">
         <label for="">Presentase yang ingin dipasang (%)</label>
-        <div class="input-group mb-3">
-          <input type="text" class="form-control bg-light border-0" value="0% - 100%" readonly>
-          <div class="input-group-append">
-            <span class="input-group-text bg-light border-0">
-              <img src="icon/chevron-down.svg" alt="chevron-down">
-            </span>
-          </div>
-        </div>
+        <dropdown-menu 
+          :menu="presentase"
+          placeholder="0% - 100%"
+          v-model="calc.presentase"
+        ></dropdown-menu>
         <label for="">Email</label>
         <input type="email" class="form-control bg-light border-0 mb-3" placeholder="*bti@gmail.com">
         <label for="">No Telp (optional)</label>
@@ -38,5 +34,17 @@ Vue.component('calculator-card', {
       </form>
     </div>
   </div>
-  `
+  `,
+  data: () => ({
+    dayaListrik: [
+      { text: '350 V', value: 350 }
+    ],
+    presentase: [
+      { text: '20%', value: 20 }
+    ],
+    calc: {
+      daya: 0,
+      presentase: 0
+    }
+  })
 })

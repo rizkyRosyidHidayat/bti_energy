@@ -2,10 +2,10 @@ Vue.component('footer-section', {
   template:`
     <footer id="footer">
       <div class="footer-container py-5">
-        <div class="container">
+        <div class="container-lg">
           <img src="img/logo.png" alt="logo" height="40">
           <div class="row mt-4">
-            <div class="col-3">
+            <div class="col-lg-3 col-md-6 col-sm-12">
               <b>Address</b>
               <p>
                 Jakarta Office: Jl. Kamal Raya, Jaya 8 No.6, 
@@ -16,7 +16,7 @@ Vue.component('footer-section', {
                 Tonja, Kota Denpasar
               </p>
             </div>
-            <div class="col-3">
+            <div class="col-lg-3 col-md-6 col-sm-12">
               <b>Sercives</b>
               <p>
                 <a 
@@ -27,7 +27,7 @@ Vue.component('footer-section', {
                 </a>
               </p>
             </div>
-            <div class="col-3">
+            <div class="col-lg-3 col-md-6 col-sm-12 mb-3">
               <b>Get in Touch</b>
               <div> www.BTIEnergy.com </div>
               <div>
@@ -46,12 +46,13 @@ Vue.component('footer-section', {
                 </a>
               </div>
             </div>
-            <div class="col-3">
+            <div class="col-lg-3 col-md-6 col-sm-12">
               <b>We Support</b>
               <p>
                 <img
                   src="./img/bank.png" 
                   alt="bank" 
+                  class="img-fluid"
                 />
               </p>
             </div>

@@ -1,12 +1,12 @@
 Vue.component('mengapa-section', {
   template: `
-    <section class="bg-light-orange pb-5">
-      <div class="container">
+    <section id="why" class="bg-light-orange pb-5">
+      <div class="container-lg">
         <h1 class="font-weight-bold text-orange title py-5 text-center">
           Mengapa BTI Energy?
         </h1>
         <div class="row">
-          <div v-for="item in cols" class="col-4">
+          <div v-for="item in cols" class="col-12 col-md-4 col-sm-12 mb-3">
             <center>
               <div class="w-75 text-center">
                 <img :src="'img/'+item.img" alt="" class="w-75 mb-3">
