@@ -1,24 +1,26 @@
 html{ scroll-behavior: smooth; }
+body{ font-family: 'Poppins', sans-serif; }
+header, footer, .top-header{ font-family: 'DM Sans', sans-serif; }
 .bg-orange{
-  background-color: orange;
+  background-color: #FDB357;
 }
 .bg-light-orange{
-  background-color: #ffecca;
+  background-color: #FAF8F5;
 }
 .btn-outline-orange{
-  border: 2px solid orange;
-  color: orange;
+  border: 2px solid #FDB357;
+  color: #FDB357;
   transition: all 0.2s ease-in-out;
 }
 .btn-outline-orange:hover{
-  background-color: orange;
+  background-color: #FDB357;
   color: #fff;
 }
 .text-orange{
-  color: orange;
+  color: #FDB357;
 }
 .border-orange{
-  border: 5px solid orange;
+  border: 5px solid #FDB357;
   border-radius: 20px;
   overflow: hidden;
 }
@@ -46,7 +48,7 @@ html{ scroll-behavior: smooth; }
   content: '';
   width: 100px;
   height: 2px;
-  background-color: orange;
+  background-color: #FDB357;
   display: inline-block;
   position: relative;
   bottom: 10px;
@@ -55,7 +57,7 @@ html{ scroll-behavior: smooth; }
   content: '';
   width: 100px;
   height: 2px;
-  background-color: orange;
+  background-color: #FDB357;
   display: inline-block;
   position: relative;
   bottom: 10px;
@@ -66,7 +68,7 @@ html{ scroll-behavior: smooth; }
   overflow: hidden;
 }
 .konsultasi{
-  background-color: orange;
+  background-color: #FDB357;
   background-image: url(../img/consultan1.png);
   background-size: 50%;
   background-position: right;
@@ -96,6 +98,10 @@ html{ scroll-behavior: smooth; }
   width: 100%;
   background-color: none;
   display: block;
+}
+
+@media screen and (min-width: 768px){
+  .w-lg-75{ width: 75% !important; }
 }
 
 @media screen and (max-width: 768px){

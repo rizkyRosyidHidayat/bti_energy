@@ -17,14 +17,14 @@ Vue.component('konsultasi-section', {
             <form action="" class="form-kosultasi">
               <div class="row mb-3">
                 <div class="col-6">
-                  <input type="text" placeholder="Nama" class="form-control text-white border-white bg-transparent p-4">
+                  <input @blur="isEmpty('nama')" @click="emptyValue('nama')" type="text" v-model="dataKonsultasi.nama" class="form-control text-white border-white bg-transparent p-4">
                 </div>
                 <div class="col-6">
-                  <input type="email" placeholder="Email" class="form-control text-white border-white bg-transparent p-4">
+                  <input @blur="isEmpty('email')" @click="emptyValue('email')" type="email" v-model="dataKonsultasi.email" class="form-control text-white border-white bg-transparent p-4">
                 </div>
               </div>
-              <input type="number" placeholder="Nomor Handphone" class="form-control text-white border-white bg-transparent p-4 mb-3">
-              <textarea placeholder="Pesan" class="form-control text-white border-white bg-transparent p-4 mb-4"></textarea>
+              <input @blur="isEmpty('nohp')" @click="emptyValue('nohp')" type="text" v-model="dataKonsultasi.nohp" class="form-control text-white border-white bg-transparent p-4 mb-3">
+              <textarea @blur="isEmpty('pesan')" @click="emptyValue('pesan')" v-model="dataKonsultasi.pesan" class="form-control text-white border-white bg-transparent p-4 mb-4"></textarea>
               <button type="submit" class="btn bg-white text-orange">
                 KIRIM PESAN
               </button>
@@ -44,5 +44,25 @@ Vue.component('konsultasi-section', {
       </div>
     </div>
   </section>
-  `
+  `,
+  data: () => ({
+    dataKonsultasi: {
+      nama: 'Nama',
+      email: 'Email',
+      nohp: 'Nomor Handphone',
+      pesan: 'Pesan'
+    },
+    label: ''
+  }),
+  methods: {
+    emptyValue(data) {
+      this.label = this.dataKonsultasi[data]
+      this.dataKonsultasi[data] = ''
+    },
+    isEmpty(data) {
+      if (this.dataKonsultasi[data] === '') {
+        this.dataKonsultasi[data] = this.label
+      }
+    }
+  }
 })

@@ -35,8 +35,9 @@ Vue.component('tenaga-section', {
       { 
         title: 'Rumah Tangga', 
         desc: `
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-        Voluptatibus corrupti distinctio id nihil velit rerum placeat.
+          Kami menawarkan sistem on grid dimana anda bisa 
+          menjual listrik kepada PLN dan mengurangi tagihan
+          listrik bulanan anda.
         `,
         img: 'home.png' ,
         link: ''
@@ -44,8 +45,9 @@ Vue.component('tenaga-section', {
       { 
         title: 'Industri', 
         desc: `
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-        Voluptatibus corrupti distinctio id nihil velit rerum placeat.
+          Untuk industri atau Perkantoran kami menawarkan
+          sistem on grid yang terkoneksi PLN. off-grid dengan baterai untuk backup
+          energi, ataupun hybrid kombinasi dari keduanya.
         `,
         img: 'industrial.png' ,
         link: ''
@@ -53,10 +55,10 @@ Vue.component('tenaga-section', {
       { 
         title: 'Productive use', 
         desc: `
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-        Voluptatibus corrupti distinctio id nihil velit rerum placeat.
+          Solar Panel juga bisa dgunakan untuk Pompa Air, Penyimpanan Es, ataupun sistam offgrid untuk 
+          daerah yang belum terjangkau listrik PLN.
         `,
-        img: 'commercial.png' ,
+        img: 'comercil.png' ,
         link: ''
       }
     ]

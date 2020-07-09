@@ -26,7 +26,7 @@ const app = new Vue({
             { text: 'PROJEK', link: '#projek' },
             { text: 'CONSULTATION', link: '#konsultasi' },
             { text: 'OUR TEAM', link: '#team' },
-            { text: 'OUR PARTNERSHIP', link: '#partner' }
+            { text: 'OUR PARTNERS', link: '#partner' }
         ],
         visibleHiddenMenu: false
     },

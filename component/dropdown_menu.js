@@ -8,6 +8,7 @@ Vue.component('dropdown-menu', {
         v-model="text" 
         class="form-control bg-light border-0" 
         readonly
+        required
         @click="visible = !visible"
       />
       <div class="input-group-append">
