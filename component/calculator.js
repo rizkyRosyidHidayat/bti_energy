@@ -13,7 +13,7 @@ Vue.component('calculator-card', {
   </div>
   `,
   data: () => ({
-    component: 'hasil-calculator'
+    component: 'form-calculator'
   }),
   methods: {
     changeComponent(val) {

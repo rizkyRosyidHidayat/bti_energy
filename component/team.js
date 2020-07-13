@@ -51,15 +51,15 @@ Vue.component('team-section', {
   `,
   data: () => ({
     team: [
-      { img: '1.png', posisi: 'advisor', pekerjaan: 'Advisor', link: '', nama: 'Nama' },
-      { img: '2.png', posisi: 'advisor', pekerjaan: 'Advisor', link: '', nama: 'Nama' },
-      { img: '3.png', posisi: 'advisor', pekerjaan: 'Advisor', link: '', nama: 'Nama' },
-      { img: '4.png', posisi: 'advisor', pekerjaan: 'Advisor', link: '', nama: 'Nama' },
-      { img: '5.png', posisi: 'advisor', pekerjaan: 'Advisor', link: '', nama: 'Nama' },
-      { img: '6.png', posisi: 'advisor', pekerjaan: 'Advisor', link: '', nama: 'Nama' },
-      { img: '7.png', posisi: 'advisor', pekerjaan: 'Advisor', link: '', nama: 'Nama' },
-      { img: '8.png', posisi: 'advisor', pekerjaan: 'Advisor', link: '', nama: 'Nama' },
-      { img: '9.png', posisi: 'advisor', pekerjaan: 'Advisor', link: '', nama: 'Nama' }
+      { img: '1.png', posisi: 'advisor', pekerjaan: 'Advisor', link: 'https://id.linkedin.com/in/andhita-mustikaningtyas', nama: 'Andhita Tyas' },
+      { img: '2.png', posisi: 'advisor', pekerjaan: 'Advisor', link: 'https://www.linkedin.com/in/cokdes/', nama: 'Cokde Susila' },
+      { img: '3.png', posisi: 'advisor', pekerjaan: 'Advisor', link: '', nama: 'A.A. Ngurah Krisna Wisesa' },
+      { img: '4.png', posisi: 'advisor', pekerjaan: 'Advisor', link: 'https://id.linkedin.com/in/erlanggabayurp', nama: 'Erlangga Bayu' },
+      { img: '5.png', posisi: 'advisor', pekerjaan: 'Advisor', link: ' https://www.linkedin.com/in/imadeaditya', nama: 'I Made Aditya' },
+      { img: '6.png', posisi: 'advisor', pekerjaan: 'Advisor', link: 'https://www.linkedin.com/in/muhammad-fahmi-625a4773/', nama: 'Muhammad Fahmi' },
+      { img: '7.png', posisi: 'advisor', pekerjaan: 'Advisor', link: '', nama: 'Muhammad Haekal' },
+      { img: '8.png', posisi: 'advisor', pekerjaan: 'Advisor', link: ' https://www.linkedin.com/in/naufal-riyandi-b34655118', nama: 'Naufal Riyandi' },
+      { img: '9.png', posisi: 'advisor', pekerjaan: 'Advisor', link: '', nama: 'Wahyu Krisna Aji F' }
     ]
   })
 })
