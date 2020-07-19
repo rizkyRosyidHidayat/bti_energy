@@ -8,16 +8,18 @@ Vue.component('calculator-card', {
       Hitung Estimasi Biaya dan <br> Penghematan Listrik Anda
     </div>
     <div class="card-body">
-      <component :is="component" @changeComponent="changeComponent" />
+      <component :data="dataHasil" :is="component" @sendData="sendData" />
     </div>
   </div>
   `,
   data: () => ({
-    component: 'form-calculator'
+    component: 'form-calculator',
+    dataHasil: ''
   }),
   methods: {
-    changeComponent(val) {
-      this.component = val
+    sendData(val) {
+      this.component = val.component
+      this.dataHasil = val.data
     }
   }
 })

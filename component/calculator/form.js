@@ -10,7 +10,7 @@ Vue.component('form-calculator', {
         v-model="calc.daya"
       ></dropdown-menu>
       <label for="">Tagihan Listrik Bulanan</label>
-      <input type="number" v-model="tagihan" required class="form-control bg-light border-0 mb-3" placeholder="Rp. 500.000">
+      <input type="number" v-model="calc.tagihan" required class="form-control bg-light border-0 mb-3" placeholder="Rp. 500.000">
       <label for="">Presentase yang ingin dipasang (%)</label>
       <dropdown-menu 
         :menu="presentase"
@@ -49,23 +49,50 @@ Vue.component('form-calculator', {
       tagihan: 0
     }
   }),
+  computed: {
+    tagihan: {
+      set(val) {
+        this.calc.tagihan = val
+      },
+      get() {
+        return Intl.NumberFormat('id-ID', { maximumSignificantDigits: 4, style: 'currency', currency: 'IDR' }).format(this.calc.tagihan)
+      }
+    }
+  },
   methods: {
     calculate() {
-      let y = 0
+      let tarif = 0
       if (this.calc.daya > 1300) 
-        y = 1467.28
+        tarif = 1467.28
       else 
-        y = 1352
+        tarif = 1352
       
       const x = this.calc.tagihan
+      const y = x/tarif
       const z = this.calc.presentase
       // step 1 menghitung total PV installed
       const p = 1.3 * y * z / 30 //kWh/day
       const q = p * 1000 / 3.919 //Wp
       // step 2 menghitung total harga komponen PV
       const r = q / 250 // buah PV
-      const s = r * 100 /*harga PV ?*/ //IDR
-       
+      const s = r * 2175000 /*harga PV*/ //IDR
+      const t = 5650000 // harga inverter
+      const u = 5000000 // harga komponen + jasa
+      const total = s+t+u //Harga total
+      const b = p*30*y //convert to IDR
+      const d = total/b //balik modal
+      const ktoe = p*365*8.59*0.001 //convert to ktoe
+      const reduceCO2 = p*365*0.283 //convert to kg co2 emission
+      this.$emit('sendData', {
+        component: 'hasil-calculator',
+        data: {
+          biaya: total,
+          hemat: b,
+          investassi: d,
+          ktoe: ktoe,
+          reduceCO2: reduceCO2
+        }
+      })
     }
   }
 })
