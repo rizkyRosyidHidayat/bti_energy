@@ -30,11 +30,11 @@ Vue.component('form-calculator', {
   `,
   data: () => ({
     dayaListrik: [
-      { text: '450 V', value: 450 },
-      { text: '900 V', value: 900 },
-      { text: '1300 V', value: 1300 },
-      { text: '2200 V', value: 2200 },
-      { text: '3500 V', value: 3500 }
+      { text: '450 VA', value: 450 },
+      { text: '900 VA', value: 900 },
+      { text: '1300 VA', value: 1300 },
+      { text: '2200 VA', value: 2200 },
+      { text: '3500 VA', value: 3500 }
     ],
     presentase: [
       { text: '25%', value: 25 },
@@ -69,28 +69,33 @@ Vue.component('form-calculator', {
       
       const x = this.calc.tagihan
       const y = x/tarif
-      const z = this.calc.presentase
+      const z = this.calc.presentase * 0.01
       // step 1 menghitung total PV installed
       const p = 1.3 * y * z / 30 //kWh/day
       const q = p * 1000 / 3.919 //Wp
       // step 2 menghitung total harga komponen PV
-      const r = q / 250 // buah PV
-      const s = r * 2175000 /*harga PV*/ //IDR
+      const r = q / 250 // buah PV (r = roundup)
+      const s = Math.ceil(r) * 2175000 /*harga PV*/ //IDR
       const t = 5650000 // harga inverter
       const u = 5000000 // harga komponen + jasa
-      const total = s+t+u //Harga total
-      const b = p*30*y //convert to IDR
-      const d = total/b //balik modal
+      const total_minimum = s+t+u //Harga total
+      const total_maksimal = total_minimum + 5000000
+      const b = p*30*tarif //convert to IDR
+      const d = total_minimum/b //balik modal
       const ktoe = p*365*8.59*0.001 //convert to ktoe
       const reduceCO2 = p*365*0.283 //convert to kg co2 emission
+      const tahun = Math.ceil(d) / 12
+      const bulan = Math.ceil(d) % 12
+      // alert(total_minimum)
       this.$emit('sendData', {
         component: 'hasil-calculator',
         data: {
-          biaya: total,
+          biaya_minimum: total_minimum,
+          biaya_maksimal: total_maksimal,
           hemat: b,
-          investassi: d,
-          ktoe: ktoe,
-          reduceCO2: reduceCO2
+          investasi: `${Math.floor(tahun)} tahun ${bulan} bulan`,
+          ktoe: ktoe.toFixed(2),
+          reduceCO2: reduceCO2.toFixed(2)
         }
       })
     }

@@ -57,22 +57,6 @@ function scrollFunction() {
     }    
 }
 
-var swiper_tenaga = new Swiper('.swiper-container-tenaga', {
-    autoplay: {
-        delay: 5000,
-        disableOnInteraction: false
-    },
-    loop: true,
-    pagination: {
-        el: '.swiper-pagination',
-        clickable: true,
-    },
-    navigation: {
-        nextEl: '.nav-right',
-        prevEl: '.nav-left',
-    }
-})
-
 var swiper_team = new Swiper('.swiper-container-team', {
     autoplay: {
         delay: 5000,

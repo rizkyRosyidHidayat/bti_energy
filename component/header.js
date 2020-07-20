@@ -20,7 +20,7 @@ Vue.component('header-section', {
             <template v-for="item in header">
               <a 
                 v-if="item.active" 
-                href="#" class="nav-item nav-link"
+                :href="item.link" class="nav-item nav-link"
                 @click="selectMenu(item.text)">
                 <div class="btn btn-sm rounded-pill bg-orange font-weight-bold text-white">
                   {{ item.text }}
@@ -50,7 +50,7 @@ Vue.component('header-section', {
         }
         return item
       })
-      this.$emit('selectedMenu', hasil)
+      this.$emit('selected-menu', hasil)
     }
   }
 })
