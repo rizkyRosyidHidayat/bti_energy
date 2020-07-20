@@ -36,10 +36,12 @@ Vue.component('mikro-hidro', {
       {
         title: 'Turbulent Vortex Turbine',
         desc: `
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
-        Deserunt ex praesentium esse, laborum, nulla, consequuntur 
-        corporis totam obcaecati expedita commodi inventore! 
-        Optio unde doloremque tempore accusantium et, fugiat laboriosam adipisci?
+        Dengan teknologi turbin Turbulent dari Belgia, 
+        kami dapat membantu anda menghasilkan energi terbarukan 
+        dari tenaga mikrohidro (sungai atau kanal) secara fleksibel 
+        dan biaya produksi listrik 
+        per kWh sangat rendah. Di Indonesia telah terpasang 13 kW 
+        plant di Green School, Bali
         `,
         img: '1.png',
         link: ''
