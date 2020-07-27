@@ -5,7 +5,7 @@ Vue.component('banner-section', {
     <section id="home" class="banner py-5">
       <div class="container-lg">
         <div class="row">
-          <div class="col-md-6 col-sm-12 order-2 order-md-1 order-sm-2">
+          <div class="col-md-6 col-sm-12 order-2 order-md-1 order-sm-2">            
             <calculator-card></calculator-card>
           </div>
           <div class="col-md-6 col-sm-12 order-1 order-md-2 order-sm-1">

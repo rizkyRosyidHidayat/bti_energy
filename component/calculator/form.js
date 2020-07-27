@@ -2,7 +2,7 @@ import '../dropdown_menu.js'
 
 Vue.component('form-calculator', {
   template: `
-    <form @submit.prevent="calculate">
+    <form @submit.prevent="calculate"  name="submit-to-google-sheet">
       <label for="">Kapasitas Listrik Terpasang</label>
       <dropdown-menu 
         :menu="dayaListrik"
@@ -18,13 +18,16 @@ Vue.component('form-calculator', {
         v-model="calc.presentase"
       ></dropdown-menu>
       <label for="">Email</label>
-      <input type="email" class="form-control bg-light border-0 mb-3" placeholder="*bti@gmail.com">
+      <input type="email" name="email" class="form-control bg-light border-0 mb-3" placeholder="*bti@gmail.com">
       <label for="">No Telp (optional)</label>
-      <input type="number" class="form-control bg-light border-0 mb-3" placeholder="+628*********">
+      <input type="number" name="nohp" class="form-control bg-light border-0 mb-3" placeholder="+628*********">
       <label for="">Domisili</label>
-      <input type="text" class="form-control bg-light border-0 mb-4" placeholder="*Jakarta">
+      <input type="text" name="domisili" class="form-control bg-light border-0 mb-4" placeholder="*Jakarta">
       <button type="submit" class="btn bg-orange text-white btn-lg px-4 font-weight-bold">
-        HITUNG
+      <div v-if="isLoading" class="spinner-border text-light" role="status">
+        <span class="sr-only">Loading...</span>
+      </div>
+        <span v-else>HITUNG</span>
       </button>
     </form>
   `,
@@ -47,7 +50,8 @@ Vue.component('form-calculator', {
       daya: 0,
       presentase: 0,
       tagihan: 0
-    }
+    },
+    isLoading: false
   }),
   computed: {
     tagihan: {
@@ -86,18 +90,29 @@ Vue.component('form-calculator', {
       const reduceCO2 = p*365*0.283 //convert to kg co2 emission
       const tahun = Math.ceil(d) / 12
       const bulan = Math.ceil(d) % 12
-      // alert(total_minimum)
-      this.$emit('sendData', {
-        component: 'hasil-calculator',
-        data: {
-          biaya_minimum: total_minimum,
-          biaya_maksimal: total_maksimal,
-          hemat: b,
-          investasi: `${Math.floor(tahun)} tahun ${bulan} bulan`,
-          ktoe: ktoe.toFixed(2),
-          reduceCO2: reduceCO2.toFixed(2)
-        }
-      })
+      // alert(total_minimum)      
+      const scriptURL = 'https://script.google.com/macros/s/AKfycbwN0b3lPPg2aQ5SKuL707MB6rqTb-EEgVeUuFsyJc2J3A7SNtPh/exec'
+      const form = document.forms['submit-to-google-sheet']
+      this.isLoading = true
+      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        .then(() => {
+          this.$emit('sendData', {
+            component: 'hasil-calculator',
+            data: {
+              biaya_minimum: total_minimum,
+              biaya_maksimal: total_maksimal,
+              hemat: b,
+              investasi: `${Math.floor(tahun)} tahun ${bulan} bulan`,
+              ktoe: ktoe.toFixed(2),
+              reduceCO2: reduceCO2.toFixed(2)
+            }
+          })
+          this.isLoading = false
+        })
+        .catch(() => {
+          alert('Proses gagal coba diulangi kembali')
+          this.isLoading = false
+        })
     }
   }
 })

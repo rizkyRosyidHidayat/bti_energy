@@ -8,7 +8,7 @@ Vue.component('fixed-header', {
           <a 
             @click="$emit('visibledhiddenmenu', true)"
             href="javascript:void(0)" 
-            class="navbar-brand position-absolute d-block d-md-none" style="left: 0;">
+            class="navbar-brand position-absolute d-block d-lg-none" style="left: 0;">
             <img src="icon/menu.svg" alt="icon menu">
           </a>
 
