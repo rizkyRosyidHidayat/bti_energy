@@ -1,13 +1,16 @@
 Vue.component('kenapa-section', {
   template: `
-  <section class="bg-light-orange pb-5">
+  <section class="bg-light-orange">
     <div class="container-lg">
-      <h1 class="font-weight-bold text-orange title py-5 text-center">
-        Kenapa Menggunakan Energi Terbarukan?
-      </h1>
+      <div class="margin-section">
+        <h1 class="font-weight-bold text-orange mb-3 text-center">
+          Kenapa Menggunakan Energi Terbarukan?
+        </h1>
+        <center><div class="title-border-bottom"></div></center>
+      </div>
       <div class="row align-items-center">
         <div class="col-md-6 col-sm-12 mb-3">
-          <div class="card-body bg-orange text-white text-justify rounded">
+          <div class="card-body bg-orange text-white text-justify rounded font-weight-bold">
             Potensi Indonesia yang sangat menakjubkan dan cadangan minyak dunia
             yang akan segera habis.
           </div>

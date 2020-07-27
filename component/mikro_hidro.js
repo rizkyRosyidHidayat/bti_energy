@@ -2,9 +2,12 @@ Vue.component('mikro-hidro', {
   template: `
     <section id="mikro_hidro" class="bg-light-orange pb-5">
       <div class="container-lg">
-        <h1 class="font-weight-bold text-orange title py-5 text-center">
-          Tenaga Mikro Hidro
-        </h1>
+        <div class="margin-section">
+          <h1 class="font-weight-bold text-orange mb-3 text-center">
+            Tenaga Mikro Hidro
+          </h1>
+          <center><div class="title-border-bottom"></div></center>
+        </div>
         <div class="swiper-container-tenaga overflow-hidden">
           <div class="swiper-wrapper">
             <div v-for="item in tenaga" class="swiper-slide d-flex flex-column flex-md-row align-items-center">
@@ -15,14 +18,14 @@ Vue.component('mikro-hidro', {
                 </p>                
                 <a 
                   href="https://drive.google.com/drive/folders/1usxhwGqmQ_DHllvQ9F6L4nyBCoT0w2d3" 
-                  @click="download" class="btn btn-outline-orange rounded-pill"
+                  class="btn btn-outline-orange rounded-pill"
                   target="_blank">
                   DOWNLOAD PROPOSAL
                 </a>                
               </div>
               <div class="col-12 col-md-6 order-1 order-md-2">
                 <div class="d-flex justify-content-end mb-3">
-                  <img :src="'img/project/'+item.img" alt="gambar tenaga mikro" class="w-100 w-md-75 rounded-lg">
+                  <img :src="'img/'+item.img" alt="gambar tenaga mikro" class="w-100 w-md-75" style="border-radius: 15px;">
                 </div>
               </div>
             </div>
@@ -43,7 +46,7 @@ Vue.component('mikro-hidro', {
         per kWh sangat rendah. Di Indonesia telah terpasang 13 kW 
         plant di Green School, Bali
         `,
-        img: '1.png',
+        img: 'project.png',
         link: ''
       }
     ]

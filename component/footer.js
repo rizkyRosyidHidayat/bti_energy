@@ -9,23 +9,25 @@ Vue.component('footer-section', {
               <b>Address</b>
               <p>
                 Jakarta Office: Jl. Kamal Raya, Jaya 8 No.6, 
-                RT.7/RW.9, Cengkareng <br>
+                RT.7/RW.9, Cengkareng <br><br>
                 Bandung Office : Jalan Kebun Bibit Barat 
-                No.29, Bandung Wetan, Kota Bandung<br>
+                No.29, Bandung Wetan, Kota Bandung<br><br>
                 Bali Office : Jalan Gatot Subroto No. 204, 
                 Tonja, Kota Denpasar
               </p>
             </div>
-            <div class="col-lg-3 col-md-6 col-sm-12">
-              <b>Sercives</b>
-              <p>
-                <a 
-                  v-for="item in services" :key="item.text"
-                  :href="item.link"
-                  class="d-block mb-1" style="color: #000;">
-                  {{ item.text }}
-                </a>
-              </p>
+            <div class="col-lg-3 col-md-6 col-sm-12 d-flex justify-content-start justify-content-sm-center">
+              <div>
+                <b>Sercives</b>
+                <p>
+                  <a 
+                    v-for="item in services" :key="item.text"
+                    :href="item.link"
+                    class="d-block mb-1" style="color: #000;">
+                    {{ item.text }}
+                  </a>
+                </p>
+              </div>
             </div>
             <div class="col-lg-3 col-md-6 col-sm-12 mb-3">
               <b>Get in Touch</b>

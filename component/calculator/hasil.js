@@ -8,7 +8,7 @@ Vue.component('hasil-calculator', {
       {{ Intl.NumberFormat('id-ID', { maximumSignificantDigits: 7, style: 'currency', currency: 'IDR' }).format(data.biaya_maksimal) }}
       </div>
       <b class="text-black-50 mb-2">Penghematan tagihan listrik hingga :</b> <br>
-      <div class="btn btn-outline-orange rounded-pill mb-3">
+      <div class="btn btn-outline-orange rounded-pill mb-3 font-weight-bold">
       {{ Intl.NumberFormat('id-ID', { maximumSignificantDigits: 4, style: 'currency', currency: 'IDR' }).format(data.hemat) }} per bulan
       </div> <br>
       <b class="text-black-50">Investasi Anda akan kembali pada</b>

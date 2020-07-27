@@ -4,10 +4,10 @@ Vue.component('hidden-menu', {
       class="hidden-menu nav flex-column fixed-top w-75 shadow bg-white"
       :class="{'active': visible}">
       <div class="nav-link">
-        <img src="img/logo.png" alt="logo web" height="40">
+        <img src="img/logo.png" alt="logo web" height="30">
       </div>
-      <div class="nav-link d-flex justify-content-between">
-        <div class="mr-3">
+      <div class="nav-link d-flex flex-column justify-content-sm-between">
+        <div class="mb-3 mr-sm-3">
           <img src="icon/marker.svg" alt="marker" height="25">
           <span>INDONESIA</span>
         </div>

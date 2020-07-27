@@ -13,7 +13,7 @@ Vue.component('top-header', {
             </div>
             <div class="nav-item">
               <span>CO2 Avoided: 70.4 Kg</span>
-              <img src="icon/lighting.svg" alt="lighting" height="25">
+              <img src="img/leaf.png" alt="leaf" height="20" class="ml-2">
             </div>
           </div>
 

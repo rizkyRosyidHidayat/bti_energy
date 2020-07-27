@@ -2,9 +2,12 @@ Vue.component('partner-section', {
   template: `
     <section id="partner" class="bg-light-orange pb-5">
       <div class="container-lg">
-        <h1 class="font-weight-bold text-orange title py-5 text-center">
-          Our Partners
-        </h1>
+        <div class="margin-section">
+          <h1 class="font-weight-bold text-orange mb-3 text-center">
+            Our Partners
+          </h1>
+          <center><div class="title-border-bottom"></div></center>
+        </div>
         <center>
           <div class="d-flex flex-column">
             <div>

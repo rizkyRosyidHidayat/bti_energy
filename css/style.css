@@ -2,25 +2,25 @@ html{ scroll-behavior: smooth; }
 body{ font-family: 'Poppins', sans-serif; }
 header, footer, .top-header{ font-family: 'DM Sans', sans-serif; }
 .bg-orange{
-  background-color: #FDB357;
+  background-color: orange;
 }
 .bg-light-orange{
   background-color: #FAF8F5;
 }
 .btn-outline-orange{
-  border: 2px solid #FDB357;
-  color: #FDB357;
+  border: 2px solid orange;
+  color: orange;
   transition: all 0.2s ease-in-out;
 }
 .btn-outline-orange:hover{
-  background-color: #FDB357;
+  background-color: orange;
   color: #fff;
 }
 .text-orange{
-  color: #FDB357;
+  color: orange;
 }
 .border-orange{
-  border: 5px solid #FDB357;
+  border: 5px solid orange;
   border-radius: 20px;
   overflow: hidden;
 }
@@ -31,6 +31,13 @@ header, footer, .top-header{ font-family: 'DM Sans', sans-serif; }
   justify-content: center;
   align-items: center;
   border-radius: 100%;
+}
+.dropdown-item{
+  transition: all 0.1s ease;
+}
+.dropdown-item:hover{
+  background-color: orange;
+  color: #fff;
 }
 #header{
   top: -90px;
@@ -44,31 +51,34 @@ header, footer, .top-header{ font-family: 'DM Sans', sans-serif; }
   background-size: cover;
   background-repeat: no-repeat;
 }
-.title::before{
+.margin-section{
+  padding: 200px 0px;
+}
+.title-border-bottom{
+  width: 100px;
+  height: 5px;
+  border-radius: 20px;
+  background-color: orange;
+  display: inline-block;
+}
+/* .title::after{
   content: '';
   width: 100px;
-  height: 2px;
-  background-color: #FDB357;
+  height: 5px;
+  border-radius: 20px;
+  background-color: orange;
   display: inline-block;
   position: relative;
-  bottom: 10px;
-}
-.title::after{
-  content: '';
-  width: 100px;
-  height: 2px;
-  background-color: #FDB357;
-  display: inline-block;
-  position: relative;
-  bottom: 10px;
-}
+  bottom: -30px;
+  right: 45%;
+} */
 .img-team{
   width: 150px;
   height: 150px;
   overflow: hidden;
 }
 .konsultasi{
-  background-color: #FDB357;
+  background-color: orange;
   background-image: url(../img/consultan1.png);
   background-size: 50%;
   background-position: right;
@@ -120,5 +130,13 @@ header, footer, .top-header{ font-family: 'DM Sans', sans-serif; }
   .bg-image-konsultasi{
     background-image: url(../img/consultan1.png);
     background-size: cover;
+  }
+}
+@media screen and (max-width: 576px){
+  h1, .h1{
+    font-size: 2rem !important;
+  }
+  .margin-section{
+    padding: 100px 0px;
   }
 }
