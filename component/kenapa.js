@@ -29,7 +29,7 @@ Vue.component('kenapa-section', {
         </div>
         <div class="col-md-6 col-sm-12">
           <div class="text-center">
-            <img src="img/group13.png" alt="statistik" class="w-75">
+            <img src="img/group13.svg" alt="statistik" class="w-75">
           </div>
         </div>
       </div>

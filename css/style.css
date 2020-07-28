@@ -4,6 +4,9 @@ header, footer, .top-header{ font-family: 'DM Sans', sans-serif; }
 .bg-orange{
   background-color: orange;
 }
+.bg-orange-light{
+  background-color: #FDB400;
+}
 .bg-light-orange{
   background-color: #FAF8F5;
 }
@@ -52,7 +55,8 @@ header, footer, .top-header{ font-family: 'DM Sans', sans-serif; }
   background-repeat: no-repeat;
 }
 .margin-section{
-  padding: 200px 0px;
+  padding-top: 200px;
+  padding-bottom: 100px;
 }
 .title-border-bottom{
   width: 100px;
@@ -88,7 +92,7 @@ header, footer, .top-header{ font-family: 'DM Sans', sans-serif; }
   color: #fff !important;
 }
 #footer{
-  background-image: url(../img/banner.png);
+  background-image: url(../img/footer.png);
   background-size: cover;
   background-repeat: no-repeat;
 }

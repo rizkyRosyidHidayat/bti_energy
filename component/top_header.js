@@ -24,7 +24,7 @@ Vue.component('top-header', {
             </div>
             <a class="nav-item nav-link" href="https://api.whatsapp.com/send?phone=6281916717995" target="_blank">
               <img src="icon/phone.svg" alt="phone" height="25">
-              <span>+62 8191 6717 995</span>
+              <span>+62 81 916 717995</span>
             </a>
           </div>
         </div>

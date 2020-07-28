@@ -10,9 +10,10 @@ Vue.component('konsultasi-section', {
             </blockquote>
             <h3>Konsultasi <b>GRATIS</b></h3>
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-              Enim expedita exercitationem tempore perferendis possimus 
-              quasi quisquam et itaque perspiciatis!
+              Kami akan berusaha membantu anda menemukan solusi 
+              terbaik untuk kebutuhan energi terbarukan anda. 
+              Silahkan masukan data anda dan akan kami hubungi 
+              untuk diskusi via online call.
             </p>
             <form action="" class="form-kosultasi">
               <div class="row mb-3">
@@ -36,7 +37,11 @@ Vue.component('konsultasi-section', {
             <p>silahkan hubungi kami kapanpun untuk berdiskusi</p>
             <p class="font-weight-bold">konsultasi gratis</p>
             <img src="img/logo_single.png" alt="logo text" width="150"> <br>
-            <a href="#" class="btn btn-success border-white mt-3">
+            <a 
+              class="btn btn-lg btn-success mt-4" 
+              style="background-color: #05D458;font-size: 18px;border: 4px solid #ffffff;border-radius: 10px;"
+              href="https://api.whatsapp.com/send?phone=6281916717995" 
+              target="_blank">
               HUBUNGI KAMI
             </a>
           </div>

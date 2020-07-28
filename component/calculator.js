@@ -4,7 +4,7 @@ import './calculator/hasil.js'
 Vue.component('calculator-card', {
   template: `
   <div class="card">
-    <div class="card-header text-center font-weight-bold border-0 bg-white shadow-sm">
+    <div class="card-header text-center font-weight-bold border-0 bg-white text-warning h5 shadow-sm">
       Hitung Estimasi Biaya dan <br> Penghematan Listrik Anda
     </div>
     <div class="card-body">

@@ -33,19 +33,7 @@ Vue.component('footer-section', {
               <b>Get in Touch</b>
               <div> www.BTIEnergy.com </div>
               <div>
-                +628-xxxxxxx
-              </div>
-              <div class="d-flex">
-                <a 
-                  v-for="item in sosmed" :key="item.icon"
-                  :href="item.link" class="mr-1">
-                  <img 
-                    class="footer-sosmed"
-                    :src="'./img/icon/'+item.icon" 
-                    :alt="item.icon" 
-                    width="25"
-                  />
-                </a>
+                +62 81 916 717995
               </div>
             </div>
             <div class="col-lg-3 col-md-6 col-sm-12">
@@ -67,11 +55,6 @@ Vue.component('footer-section', {
     </footer>
   `,
   data: () => ({
-		sosmed: [
-			{ icon: 'facebook.svg', link: '' },
-			{ icon: 'linkedin.svg', link: '' },
-			{ icon: 'whatsapp.svg', link: '' }
-		],
 		services: [
 			{ text: 'Tenaga Surya', link: '' },
 			{ text: 'Mikrohidro', link: '' },

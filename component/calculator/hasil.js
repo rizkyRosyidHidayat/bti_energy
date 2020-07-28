@@ -20,7 +20,7 @@ Vue.component('hasil-calculator', {
       <div>Anda membantu mengurangi emisi CO2 sebesar</div>
       <div class="text-orange mb-3">{{ data.reduceCO2 }} kg/tahun</div>
       <div class="d-flex justify-content-between mb-5">
-        <b class="text-black-50">Tertarik</b>
+        <b class="text-black-50">Tertarik ?</b>
         <a class="btn btn-success" href="https://api.whatsapp.com/send?phone=6281916717995">
           Konsultasi Gratis
         </a>

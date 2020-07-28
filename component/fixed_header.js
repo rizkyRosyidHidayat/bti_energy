@@ -20,15 +20,15 @@ Vue.component('fixed-header', {
             <template v-for="item in header">
               <a 
                 v-if="item.active" 
-                :href="item.link" class="nav-item nav-link"
+                :href="item.link" class="nav-item nav-link mx-3"
                 @click="selectMenu(item.text)">
-                <div class="btn btn-sm rounded-pill bg-orange font-weight-bold text-white">
+                <div class="btn btn-sm rounded-pill bg-orange-light font-weight-bold text-white">
                   {{ item.text }}
                 </div>
               </a>
               <a 
                 v-else href="#" 
-                class="nav-item nav-link text-black-50 font-weight-bold"
+                class="nav-item nav-link text-black-50 font-weight-bold mx-3"
                 @click="selectMenu(item.text)">
                 {{ item.text }}
               </a>

@@ -23,7 +23,7 @@ const app = new Vue({
 			{ link: '#mikro_hidro', text: 'MIKRO HIDRO', active: false }
         ],
         other: [
-            { text: 'PROJEK', link: '#projek' },
+            { text: 'PROJECT', link: '#projek' },
             { text: 'CONSULTATION', link: '#konsultasi' },
             { text: 'OUR TEAM', link: '#team' },
             { text: 'OUR PARTNERS', link: '#partner' }
