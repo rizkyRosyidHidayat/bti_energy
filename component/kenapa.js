@@ -2,7 +2,7 @@ Vue.component('kenapa-section', {
   template: `
   <section class="bg-light-orange">
     <div class="container-lg">
-      <div class="margin-section">
+      <div style="padding-top: 130px; padding-bottom: 100px">
         <h1 class="font-weight-bold text-orange mb-3 text-center">
           Kenapa Menggunakan Energi Terbarukan?
         </h1>
