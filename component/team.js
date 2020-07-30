@@ -2,12 +2,12 @@ Vue.component('team-section', {
   template: `
     <section id="team" class="bg-light-orange pb-5">
       <div class="container-lg">
-        <div class="margin-section">
+        <div  style="margin-bottom: 66px;padding-top: 200px">
           <h1 class="font-weight-bold text-orange mb-3 text-center">
             Our Team
           </h1>
           <center><div class="title-border-bottom"></div></center>
-          <p class="text-center mt-5">
+          <p class="text-center"  style="margin-top: 30px">
             Kami didukung oleh tim yang memiliki antusias tinggi untuk membantu
             anda <br> memanfaatkan Energi Terbarukan
           </p>

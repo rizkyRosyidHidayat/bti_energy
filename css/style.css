@@ -143,4 +143,8 @@ header, footer, .top-header{ font-family: 'DM Sans', sans-serif; }
   .margin-section{
     padding: 100px 0px;
   }
+  .img-kenapa{
+    width: 100%;
+    height: auto;
+  }
 }

@@ -2,14 +2,14 @@ Vue.component('kenapa-section', {
   template: `
   <section class="bg-light-orange">
     <div class="container-lg">
-      <div style="padding-top: 130px; padding-bottom: 100px">
+      <div style="padding-top: 60px; padding-bottom: 100px">
         <h1 class="font-weight-bold text-orange mb-3 text-center">
           Kenapa Menggunakan Energi Terbarukan?
         </h1>
         <center><div class="title-border-bottom"></div></center>
       </div>
       <div class="row align-items-center">
-        <div class="col-md-6 col-sm-12 mb-3">
+        <div class="col-md-5 col-sm-12 mb-3">
           <div class="card-body bg-orange text-white text-justify rounded font-weight-bold">
             Potensi Indonesia yang sangat menakjubkan dan cadangan minyak dunia
             yang akan segera habis.
@@ -27,9 +27,9 @@ Vue.component('kenapa-section', {
           </p>
           <div class="bg-orange btn p-1 rounded-pill" style="width: 100px;"></div>
         </div>
-        <div class="col-md-6 col-sm-12">
-          <div class="text-center">
-            <img src="img/group13.svg" alt="statistik" class="w-75">
+        <div class="col-md-7 col-sm-12">
+          <div class="text-right">
+            <img src="img/group13.svg" alt="statistik" width="462.03" height="455" class="img-kenapa">
           </div>
         </div>
       </div>
