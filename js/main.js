@@ -13,6 +13,10 @@ import '../component/konsultasi.js'
 import '../component/footer.js'
 import '../component/hidden_menu.js'
 
+// Vue.filter('currency', function (val) {
+//     return parseFloat(val).toFixed(0).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");    
+// })
+
 const app = new Vue({
     el: '#app',
     data: {

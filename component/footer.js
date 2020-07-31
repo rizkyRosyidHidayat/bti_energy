@@ -18,7 +18,7 @@ Vue.component('footer-section', {
             </div>
             <div class="col-lg-3 col-md-6 col-sm-12 d-flex justify-content-start justify-content-sm-center">
               <div>
-                <b>Sercives</b>
+                <b>Services</b>
                 <p>
                   <a 
                     v-for="item in services" :key="item.text"

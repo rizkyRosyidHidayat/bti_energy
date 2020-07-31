@@ -10,7 +10,7 @@ Vue.component('form-calculator', {
         v-model="calc.daya"
       ></dropdown-menu>
       <label for="">Tagihan Listrik Bulanan</label>
-      <input type="number" v-model="calc.tagihan" required class="form-control bg-light border-0 mb-3" placeholder="Rp. 500.000">
+      <input type="text" v-model="calc.tagihan" @blur="convert" @focus="returnInt" required class="form-control bg-light border-0 mb-3" placeholder="Rp. 500.000">
       <label for="">Presentase yang ingin dipasang (%)</label>
       <dropdown-menu 
         :menu="presentase"
@@ -49,21 +49,26 @@ Vue.component('form-calculator', {
     calc: {
       daya: 0,
       presentase: 0,
-      tagihan: 0
+      tagihan: null
     },
-    isLoading: false
+    isLoading: false,
+    tagihan: 0
   }),
-  computed: {
-    tagihan: {
-      set(val) {
-        this.calc.tagihan = val
-      },
-      get() {
-        return Intl.NumberFormat('id-ID', { maximumSignificantDigits: 4, style: 'currency', currency: 'IDR' }).format(this.calc.tagihan)
-      }
+  filters: {
+    currency: function (val) {
+      return parseFloat(val).toFixed(0).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");          
     }
   },
   methods: {
+    convert() {
+      this.tagihan = this.calc.tagihan
+      this.calc.tagihan = Intl.NumberFormat('id-ID', { maximumSignificantDigits: 7, style: 'currency', currency: 'IDR' }).format(this.calc.tagihan)
+    },
+    returnInt() {
+      if (this.calc.tagihan !== null) {
+        this.calc.tagihan = this.tagihan
+      }
+    },
     calculate() {
       let tarif = 0
       if (this.calc.daya > 1300) 
@@ -71,7 +76,7 @@ Vue.component('form-calculator', {
       else 
         tarif = 1352
       
-      const x = this.calc.tagihan
+      const x = parseInt(this.tagihan)
       const y = x/tarif
       const z = this.calc.presentase * 0.01
       // step 1 menghitung total PV installed
