@@ -147,4 +147,7 @@ header, footer, .top-header{ font-family: 'DM Sans', sans-serif; }
     width: 100%;
     height: auto;
   }
+  .swiper-container-tenaga h3{
+    font-size: 24px;
+  }
 }

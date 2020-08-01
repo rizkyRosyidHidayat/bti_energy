@@ -22,7 +22,7 @@ Vue.component('tenaga-section', {
         </div>
       </div>
       <div class="row align-items-start">
-        <div v-for="item in cols" class="col-12 col-md-4 col-sm-12 mb-3">
+        <div v-for="item in cols" class="col-12 col-md-4 col-sm-12 mb-5 mb-md-0">
           <center>
             <img :src="'img/'+item.img" alt="" class="w-75 d-block d-sm-none">
             <div class="w-75 text-center">
