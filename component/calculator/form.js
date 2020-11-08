@@ -89,7 +89,8 @@ Vue.component('form-calculator', {
       const u = 5000000 // harga komponen + jasa
       const total_minimum = s+t+u //Harga total
       const total_maksimal = total_minimum + 5000000
-      const b = p*30*tarif //convert to IDR
+      // const b = p*30*tarif //convert to IDR
+      const b = x*z;
       const d = total_minimum/b //balik modal
       const ktoe = p*365*8.59*0.001 //convert to ktoe
       const reduceCO2 = p*365*0.283 //convert to kg co2 emission
